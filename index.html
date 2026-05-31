@@ -39,6 +39,33 @@ h1 {
   opacity:0.7;
 }
 
+/* TITRES */
+.title {
+  text-align:center;
+  margin-top:25px;
+  font-size:18px;
+  color:#93C5FD;
+}
+
+/* CARDS */
+.card {
+  background:#111A2E;
+  margin:10px auto;
+  width:85%;
+  padding:15px;
+  border-radius:12px;
+}
+
+/* INPUTS */
+input, select {
+  width:100%;
+  padding:12px;
+  margin:6px 0;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+
 /* BUTTONS */
 .btn {
   display:block;
@@ -61,39 +88,13 @@ h1 {
   color:white;
 }
 
-/* CARDS */
-.card {
-  background:#111A2E;
-  margin:10px auto;
-  width:85%;
-  padding:15px;
-  border-radius:12px;
-}
-
-/* INPUTS */
-input, select {
-  width:100%;
-  padding:12px;
-  margin:6px 0;
-  border-radius:10px;
-  border:none;
-  outline:none;
-}
-
-/* SECTION TITLE */
-.title {
-  text-align:center;
-  margin-top:25px;
-  font-size:18px;
-  color:#93C5FD;
-}
-
 /* FOOTER TEXT */
 .small {
   text-align:center;
-  font-size:12px;
-  opacity:0.6;
-  margin-top:20px;
+  font-size:13px;
+  opacity:0.8;
+  margin-top:10px;
+  font-style:italic;
 }
 </style>
 </head>
@@ -130,25 +131,46 @@ input, select {
 <!-- PACKS -->
 <div class="title">Nos Packs</div>
 
-<div class="card">Basic — rapide & extérieur</div>
-<div class="card">Full — intérieur + extérieur</div>
-<div class="card">Premium — finition premium complète</div>
+<div class="card">Basic — lavage extérieur rapide</div>
+<div class="card">Full — intérieur + extérieur complet</div>
+<div class="card">Premium — finition haut de gamme</div>
 
 <!-- ZONE -->
-<div class="title">Zone</div>
-<div class="card">Marrakech + 25 km</div>
+<div class="title">Zone de travail</div>
 
-<!-- CTA -->
-<a class="btn primary" href="https://instagram.com">Instagram</a>
+<div class="card">
+Marrakech + rayon de 25 km
+</div>
 
-<div class="small">“Le détail fait la différence”</div>
+<!-- VALEURS -->
+<div class="title">Nos valeurs</div>
+
+<div class="card">
+Qualité • Rapidité • Soin du détail • Confiance client
+</div>
+
+<!-- PHRASE -->
+<div class="card">
+<p class="small">“Le détail fait la différence.”</p>
+</div>
+
+<!-- CONTACT -->
+<div class="title">Contact</div>
+
+<div class="card">
+<p>📧 contactelephanteau@gmail.com</p>
+
+<a class="btn primary" href="https://instagram.com" target="_blank">
+📸 Instagram
+</a>
+</div>
 
 <script>
 function sendWhatsApp() {
 
   let service = document.getElementById("service").value;
   let nom = document.getElementById("nom").value;
-  let tel = document.getElementById("telephone").value;
+  let telephone = document.getElementById("telephone").value;
   let email = document.getElementById("email").value;
   let heure = document.getElementById("heure").value;
   let adresse = document.getElementById("adresse").value;
@@ -157,7 +179,7 @@ function sendWhatsApp() {
   "Bonjour Éléphanteau Wash,%0A%0A" +
   "Nouvelle réservation premium :%0A%0A" +
   "Nom : " + nom + "%0A" +
-  "Téléphone : " + tel + "%0A" +
+  "Téléphone : " + telephone + "%0A" +
   "Email : " + email + "%0A" +
   "Service : " + service + "%0A" +
   "Heure : " + heure + "%0A" +
@@ -167,13 +189,6 @@ function sendWhatsApp() {
   window.open("https://wa.me/212600795000?text=" + message, "_blank");
 }
 </script>
-<div class="title">Contact</div>
 
-<div class="card">
-  <p>📧 contactelephanteau@gmail.com</p>
-  <a class="btn primary" href="https://instagram.com" target="_blank">
-    📸 Instagram
-  </a>
-</div>
 </body>
 </html>
