@@ -46,7 +46,7 @@ h1{
     color:#1E3A8A;
 }
 
-/* FORMULAIRE */
+/* FORM */
 .form-card{
     background:white;
     width:90%;
@@ -83,7 +83,7 @@ input,select{
     color:white;
 }
 
-/* BLOCS BAS */
+/* BLOCS */
 .info-card{
     width:90%;
     max-width:700px;
@@ -95,16 +95,24 @@ input,select{
     text-align:center;
 }
 
+/* PACK TITLE */
 .pack-title{
     font-size:24px;
     font-weight:bold;
     color:#1E3A8A;
+    margin-bottom:10px;
 }
 
+/* PACK TEXT */
 .pack-text{
     font-size:18px;
     line-height:1.5;
-    margin-top:5px;
+}
+
+/* ICÔNES PACKS */
+.icon{
+    font-size:22px;
+    margin-right:8px;
 }
 
 /* PHRASE */
@@ -139,26 +147,6 @@ input,select{
     font-size:14px;
     color:#777;
     margin:30px 0 20px;
-}
-
-/* STICKY BUTTON */
-.sticky-btn{
-    position:fixed;
-    bottom:15px;
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
-    max-width:420px;
-    background:#25D366;
-    color:white;
-    text-align:center;
-    padding:15px;
-    border-radius:14px;
-    font-weight:bold;
-    font-size:16px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.25);
-    z-index:9999;
-    cursor:pointer;
 }
 
 </style>
@@ -199,17 +187,17 @@ Réserver sur WhatsApp
 <div class="title">Nos Packs</div>
 
 <div class="info-card">
-<div class="pack-title">Basic - 80 DHS</div>
+<div class="pack-title">🚗 Basic - 80 DHS</div>
 <div class="pack-text">Lavage extérieur rapide et efficace</div>
 </div>
 
 <div class="info-card">
-<div class="pack-title">Full - 130 DHS</div>
+<div class="pack-title">🧼 Full - 130 DHS</div>
 <div class="pack-text">Intérieur + extérieur propre et soigné</div>
 </div>
 
 <div class="info-card">
-<div class="pack-title">Premium - 200 DHS</div>
+<div class="pack-title">✨ Premium - 200 DHS</div>
 <div class="pack-text">Finition haut de gamme avec soin du détail</div>
 </div>
 
@@ -255,11 +243,6 @@ Instagram
 © 2026 Éléphanteau Car Wash — All rights reserved
 </div>
 
-<!-- STICKY BUTTON -->
-<div class="sticky-btn" onclick="scrollToTopForm()">
-📲 Réserver maintenant
-</div>
-
 <script>
 
 function sendWhatsApp(){
@@ -284,12 +267,6 @@ let message=
 
 window.open("https://wa.me/212600795000?text="+message,"_blank");
 
-}
-
-function scrollToTopForm(){
-    document.querySelector(".form-card").scrollIntoView({
-        behavior:"smooth"
-    });
 }
 
 </script>
