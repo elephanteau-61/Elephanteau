@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Réservation Car Wash</title>
+<title>Éléphanteau Car Wash</title>
 
 <style>
 body {
@@ -12,13 +12,17 @@ body {
 }
 
 header {
-  background:#87CEEB;
+  background:#1E3A8A; /* bleu foncé */
   color:white;
   text-align:center;
   padding:30px;
 }
 
 .logo { width:120px; }
+
+h2 {
+  color:#1E3A8A;
+}
 
 section {
   padding:20px;
@@ -31,6 +35,7 @@ section {
   max-width:500px;
   padding:15px;
   border-radius:10px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 select, input {
@@ -51,6 +56,24 @@ select, input {
   font-weight:bold;
   margin-top:10px;
 }
+
+/* packs */
+.price {
+  font-weight:bold;
+  color:#1E3A8A;
+}
+
+.phrase {
+  font-weight:bold;
+  color:#1E3A8A;
+  font-size:18px;
+  margin-top:10px;
+}
+
+.insta {
+  color:#E1306C;
+  font-weight:bold;
+}
 </style>
 </head>
 
@@ -58,15 +81,16 @@ select, input {
 
 <header>
 <img src="logo.png.png" class="logo">
-<h1>Réservation Car Wash</h1>
-<p><b>Le détail fait la différence.</b></p>
+<h1>Éléphanteau Car Wash</h1>
+<p><b>Lavage rapide • Propre • Professionnel</b></p>
 </header>
 
+<!-- RESERVATION -->
 <section>
 
-<div class="box">
+<h2>Réservation</h2>
 
-<h3>Réserver maintenant</h3>
+<div class="box">
 
 <select id="service">
   <option value="Basic - 80 DHS">Basic - 80 DHS</option>
@@ -75,7 +99,7 @@ select, input {
 </select>
 
 <input id="heure" type="text" placeholder="Heure (ex: 14h30)">
-<input id="zone" type="text" value="Marrakech + 25km">
+<input id="adresse" type="text" placeholder="Adresse complète">
 
 <a class="btn" href="#" onclick="sendWhatsApp()">Réserver sur WhatsApp</a>
 
@@ -83,17 +107,71 @@ select, input {
 
 </section>
 
+<!-- PACKS -->
+<section>
+
+<h2>Nos Packs</h2>
+
+<div class="box">
+<p class="price">Basic - 80 DHS</p>
+<p>Lavage extérieur simple et rapide.</p>
+</div>
+
+<div class="box">
+<p class="price">Full - 130 DHS</p>
+<p>Intérieur + extérieur complet avec finition propre.</p>
+</div>
+
+<div class="box">
+<p class="price">Premium - 200 DHS</p>
+<p>Nettoyage complet haut de gamme avec soin du détail.</p>
+</div>
+
+</section>
+
+<!-- ZONE -->
+<section>
+
+<h2>Zone de travail</h2>
+
+<div class="box">
+<p style="color:#1E3A8A;font-weight:bold;">
+Marrakech + rayon de 25 km
+</p>
+</div>
+
+</section>
+
+<!-- PHRASE -->
+<section>
+
+<div class="box">
+<p class="phrase">“Le détail fait la différence.”</p>
+</div>
+
+</section>
+
+<!-- INSTAGRAM -->
+<section>
+
+<h2>Contact</h2>
+
+<p class="insta">Instagram : @toncompte</p>
+
+</section>
+
 <script>
 function sendWhatsApp() {
+
   let service = document.getElementById("service").value;
   let heure = document.getElementById("heure").value;
-  let zone = document.getElementById("zone").value;
+  let adresse = document.getElementById("adresse").value;
 
   let message =
   "Bonjour, je veux réserver un lavage voiture.%0A" +
   "Service : " + service + "%0A" +
   "Heure : " + heure + "%0A" +
-  "Zone : " + zone;
+  "Adresse : " + adresse;
 
   let phone = "212600795000";
 
