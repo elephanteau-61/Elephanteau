@@ -1,149 +1,105 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Éléphanteau Car Wash</title>
+<meta charset="UTF-8">
+<title>Réservation Car Wash</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #222;
-    }
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background:#f4f4f4;
+}
 
-    header {
-      background: #87CEEB; /* bleu ciel */
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+header {
+  background:#87CEEB;
+  color:white;
+  text-align:center;
+  padding:30px;
+}
 
-    .logo {
-      width: 120px;
-      margin-bottom: 10px;
-    }
+.logo { width:120px; }
 
-    h1 {
-      margin: 10px 0;
-      font-size: 34px;
-    }
+section {
+  padding:20px;
+  text-align:center;
+}
 
-    .tagline {
-      font-size: 16px;
-      opacity: 0.9;
-    }
+.box {
+  background:white;
+  margin:10px auto;
+  max-width:500px;
+  padding:15px;
+  border-radius:10px;
+}
 
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+select, input {
+  width:90%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
 
-    .box {
-      background: white;
-      margin: 10px auto;
-      max-width: 500px;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .price {
-      font-weight: bold;
-      color: #111;
-    }
-
-    .phrase {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 20px;
-      color: #111;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 12px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    .wa { background: #25D366; }
-    .ig { background: #E1306C; }
-    .fb { background: #1877F2; }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 12px;
-      color: #777;
-    }
-
-    .zone {
-      font-weight: bold;
-      margin-top: 10px;
-      color: #333;
-    }
-  </style>
+.btn {
+  display:inline-block;
+  background:#25D366;
+  color:white;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png.png" alt="logo" class="logo">
-  <h1>Éléphanteau Car Wash</h1>
-  <p class="tagline">Lavage rapide • Propre • Professionnel</p>
+<img src="logo.png.png" class="logo">
+<h1>Réservation Car Wash</h1>
+<p><b>Le détail fait la différence.</b></p>
 </header>
 
 <section>
-  <h2>Nos Packs</h2>
 
-  <div class="box">
-    <p class="price">Basic - 80 DHS</p>
-    <p>Lavage extérieur simple</p>
-  </div>
+<div class="box">
 
-  <div class="box">
-    <p class="price">Full - 130 DHS</p>
-    <p>Intérieur + extérieur complet</p>
-  </div>
+<h3>Réserver maintenant</h3>
 
-  <div class="box">
-    <p class="price">Premium - 200 DHS</p>
-    <p>Nettoyage complet + finition haut de gamme</p>
-  </div>
+<select id="service">
+  <option value="Basic - 80 DHS">Basic - 80 DHS</option>
+  <option value="Full - 130 DHS">Full - 130 DHS</option>
+  <option value="Premium - 200 DHS">Premium - 200 DHS</option>
+</select>
 
-  <p class="phrase">“Le détail fait la différence.”</p>
+<input id="heure" type="text" placeholder="Heure (ex: 14h30)">
+<input id="zone" type="text" value="Marrakech + 25km">
+
+<a class="btn" href="#" onclick="sendWhatsApp()">Réserver sur WhatsApp</a>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Produits Haut de Gamme</h2>
+<script>
+function sendWhatsApp() {
+  let service = document.getElementById("service").value;
+  let heure = document.getElementById("heure").value;
+  let zone = document.getElementById("zone").value;
 
-  <div class="box">Shampoing premium carrosserie</div>
-  <div class="box">Dégraissant intérieur professionnel</div>
-  <div class="box">Cire de protection longue durée</div>
-  <div class="box">Nettoyage jantes spécial pro</div>
-</section>
+  let message =
+  "Bonjour, je veux réserver un lavage voiture.%0A" +
+  "Service : " + service + "%0A" +
+  "Heure : " + heure + "%0A" +
+  "Zone : " + zone;
 
-<section>
-  <h2>Zone de travail</h2>
-  <p class="zone">Marrakech + rayon de 25 km</p>
-</section>
+  let phone = "212600795000";
 
-<section>
-  <h2>Contact</h2>
-
-  <a class="btn wa" href="https://wa.me/212600795000">WhatsApp</a>
-  <a class="btn ig" href="https://instagram.com">Instagram</a>
-  <a class="btn fb" href="https://facebook.com">Facebook</a>
-</section>
-
-<footer>
-  © 2026 Éléphanteau Car Wash
-</footer>
+  window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+}
+</script>
 
 </body>
 </html>
