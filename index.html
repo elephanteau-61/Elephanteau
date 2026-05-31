@@ -12,13 +12,16 @@ body {
 }
 
 header {
-  background:#1E3A8A; /* bleu foncé */
+  background:#1E3A8A;
   color:white;
   text-align:center;
   padding:30px;
 }
 
-.logo { width:120px; }
+.logo {
+  width:120px;
+  margin-bottom:10px;
+}
 
 h2 {
   color:#1E3A8A;
@@ -38,7 +41,7 @@ section {
   box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-select, input {
+input, select {
   width:90%;
   padding:10px;
   margin:8px 0;
@@ -57,7 +60,6 @@ select, input {
   margin-top:10px;
 }
 
-/* packs */
 .price {
   font-weight:bold;
   color:#1E3A8A;
@@ -65,14 +67,18 @@ select, input {
 
 .phrase {
   font-weight:bold;
-  color:#1E3A8A;
   font-size:18px;
-  margin-top:10px;
+  color:#1E3A8A;
 }
 
 .insta {
   color:#E1306C;
   font-weight:bold;
+}
+
+.zone {
+  font-weight:bold;
+  color:#1E3A8A;
 }
 </style>
 </head>
@@ -80,9 +86,9 @@ select, input {
 <body>
 
 <header>
-<img src="logo.png.png" class="logo">
-<h1>Éléphanteau Car Wash</h1>
-<p><b>Lavage rapide • Propre • Professionnel</b></p>
+  <img src="logo.png.png" class="logo">
+  <h1>Éléphanteau Car Wash</h1>
+  <p><b>Lavage rapide • Propre • Professionnel</b></p>
 </header>
 
 <!-- RESERVATION -->
@@ -98,6 +104,9 @@ select, input {
   <option value="Premium - 200 DHS">Premium - 200 DHS</option>
 </select>
 
+<input id="nom" type="text" placeholder="Nom complet">
+<input id="telephone" type="text" placeholder="Téléphone">
+<input id="email" type="email" placeholder="Email">
 <input id="heure" type="text" placeholder="Heure (ex: 14h30)">
 <input id="adresse" type="text" placeholder="Adresse complète">
 
@@ -114,17 +123,17 @@ select, input {
 
 <div class="box">
 <p class="price">Basic - 80 DHS</p>
-<p>Lavage extérieur simple et rapide.</p>
+<p>Lavage extérieur simple rapide.</p>
 </div>
 
 <div class="box">
 <p class="price">Full - 130 DHS</p>
-<p>Intérieur + extérieur complet avec finition propre.</p>
+<p>Intérieur + extérieur complet.</p>
 </div>
 
 <div class="box">
 <p class="price">Premium - 200 DHS</p>
-<p>Nettoyage complet haut de gamme avec soin du détail.</p>
+<p>Nettoyage complet haut de gamme avec finition parfaite.</p>
 </div>
 
 </section>
@@ -135,9 +144,7 @@ select, input {
 <h2>Zone de travail</h2>
 
 <div class="box">
-<p style="color:#1E3A8A;font-weight:bold;">
-Marrakech + rayon de 25 km
-</p>
+<p class="zone">Marrakech + rayon de 25 km</p>
 </div>
 
 </section>
@@ -155,7 +162,6 @@ Marrakech + rayon de 25 km
 <section>
 
 <h2>Contact</h2>
-
 <p class="insta">Instagram : @toncompte</p>
 
 </section>
@@ -164,14 +170,22 @@ Marrakech + rayon de 25 km
 function sendWhatsApp() {
 
   let service = document.getElementById("service").value;
+  let nom = document.getElementById("nom").value;
+  let telephone = document.getElementById("telephone").value;
+  let email = document.getElementById("email").value;
   let heure = document.getElementById("heure").value;
   let adresse = document.getElementById("adresse").value;
 
   let message =
-  "Bonjour, je veux réserver un lavage voiture.%0A" +
+  "Bonjour Éléphanteau Car Wash,%0A%0A" +
+  "Nouvelle réservation :%0A%0A" +
+  "Nom : " + nom + "%0A" +
+  "Téléphone : " + telephone + "%0A" +
+  "Email : " + email + "%0A" +
   "Service : " + service + "%0A" +
   "Heure : " + heure + "%0A" +
-  "Adresse : " + adresse;
+  "Adresse : " + adresse + "%0A%0A" +
+  "Merci de confirmer la disponibilité.";
 
   let phone = "212600795000";
 
