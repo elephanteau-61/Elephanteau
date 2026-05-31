@@ -2,242 +2,298 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Éléphanteau Car Wash</title>
 
 <style>
-body {
-  margin:0;
-  font-family:Arial;
-  background:#f5f7fb;
-  color:#111;
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
 }
 
 /* HEADER */
-header {
-  text-align:center;
-  padding:50px 20px;
-  background:#1E3A8A;
-  color:white;
+
+header{
+    background:#1E3A8A;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
 }
 
-.logo {
-  width:120px;
-  margin-bottom:10px;
-  animation: float 3s ease-in-out infinite;
+.logo{
+    width:120px;
+    margin-bottom:10px;
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+h1{
+    margin:10px 0;
+    font-size:34px;
 }
 
-h1 {
-  font-size:30px;
-  margin:10px 0;
-}
-
-.subtitle {
-  opacity:0.85;
-  font-size:15px;
+.subtitle{
+    font-size:18px;
+    opacity:0.9;
 }
 
 /* TITRES */
-.title {
-  text-align:center;
-  margin-top:35px;
-  font-size:20px;
-  color:#1E3A8A;
-  font-weight:bold;
+
+.title{
+    text-align:center;
+    color:#1E3A8A;
+    font-size:30px;
+    font-weight:bold;
+    margin-top:45px;
+    margin-bottom:20px;
 }
 
-/* CARDS (PACKS + DESCRIPTION) */
-.card {
-  background:white;
-  margin:15px auto;
-  width:90%;
-  max-width:520px;
-  padding:22px;
-  border-radius:14px;
-  box-shadow:0 3px 12px rgba(0,0,0,0.08);
-  text-align:center; /* CENTRÉ DANS CHAQUE CASE */
+/* FORMULAIRE */
+
+.form-card{
+    background:white;
+    width:90%;
+    max-width:520px;
+    margin:0 auto;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-/* INPUTS (ON NE TOUCHE PAS LE FORMULAIRE) */
-input, select {
-  width:100%;
-  padding:12px;
-  margin:8px 0;
-  border-radius:10px;
-  border:1px solid #ddd;
-  font-size:15px;
-  outline:none;
+input,
+select{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    box-sizing:border-box;
 }
 
-/* BUTTONS */
-.btn {
-  display:block;
-  width:100%;
-  margin-top:12px;
-  padding:15px;
-  border-radius:12px;
-  text-decoration:none;
-  font-weight:bold;
-  text-align:center;
-  font-size:15px;
+.btn{
+    display:block;
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
 }
 
-.whatsapp {
-  background:#25D366;
-  color:white;
+.whatsapp{
+    background:#25D366;
+    color:white;
 }
 
-.primary {
-  background:#1E3A8A;
-  color:white;
+/* BLOCS DU BAS */
+
+.info-card{
+    width:70%;
+    max-width:900px;
+    margin:15px auto;
+    padding:30px;
+    background:white;
+    border-radius:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.08);
+    text-align:center;
 }
 
-/* TEXT */
-.small {
-  text-align:center;
-  font-size:16px;
-  color:#555;
-  font-style:italic;
-  line-height:1.5;
+.pack-title{
+    font-size:26px;
+    font-weight:bold;
+    color:#1E3A8A;
+    margin-bottom:10px;
 }
 
-/* PACK TEXT STYLE */
-.pack-title {
-  font-size:18px;
-  font-weight:bold;
-  color:#1E3A8A;
-  margin-bottom:6px;
+.pack-text{
+    font-size:20px;
+    line-height:1.6;
 }
 
-.pack-text {
-  font-size:15px;
-  color:#333;
+.phrase{
+    font-size:36px;
+    font-weight:bold;
+    color:#1E3A8A;
+    line-height:1.4;
 }
 
-/* COPYRIGHT */
-.footer {
-  text-align:center;
-  font-size:13px;
-  color:#777;
-  margin:30px 0 20px 0;
+.contact-text{
+    font-size:22px;
 }
+
+.instagram-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 25px;
+    background:#1E3A8A;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.footer{
+    text-align:center;
+    color:#777;
+    font-size:14px;
+    margin:40px 0 20px 0;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png.png" class="logo">
-  <h1>Éléphanteau Car Wash</h1>
-  <p class="subtitle">Lavage rapide • Propre • Professionnel</p>
+
+<img src="logo.png.png" alt="Logo" class="logo">
+
+<h1>Éléphanteau Car Wash</h1>
+
+<p class="subtitle">
+Lavage rapide • Propre • Professionnel
+</p>
+
 </header>
 
-<!-- RESERVATION (inchangé) -->
+<!-- RESERVATION -->
+
 <div class="title">Réservation</div>
 
-<div class="card">
+<div class="form-card">
 
 <select id="service">
-  <option>Basic - 80 DHS</option>
-  <option>Full - 130 DHS</option>
-  <option>Premium - 200 DHS</option>
+<option>Basic - 80 DHS</option>
+<option>Full - 130 DHS</option>
+<option>Premium - 200 DHS</option>
 </select>
 
 <input id="nom" placeholder="Nom complet">
+
 <input id="telephone" placeholder="Téléphone">
+
 <input id="email" placeholder="Email">
-<input id="heure" placeholder="Heure (ex: 14h)">
+
+<input id="heure" placeholder="Heure souhaitée">
+
 <input id="adresse" placeholder="Adresse complète">
 
-<a class="btn whatsapp" href="#" onclick="sendWhatsApp()">
+<a href="#" class="btn whatsapp" onclick="sendWhatsApp()">
 Réserver sur WhatsApp
 </a>
 
 </div>
 
 <!-- PACKS -->
+
 <div class="title">Nos Packs</div>
 
-<div class="card">
-<div class="pack-title">Basic - 80 DHS</div>
-<div class="pack-text">Lavage extérieur rapide et efficace</div>
+<div class="info-card">
+<div class="pack-title">Basic – 80 DHS</div>
+<div class="pack-text">
+Lavage extérieur complet pour redonner éclat et propreté à votre véhicule.
+</div>
 </div>
 
-<div class="card">
-<div class="pack-title">Full - 130 DHS</div>
-<div class="pack-text">Intérieur + extérieur propre et soigné</div>
+<div class="info-card">
+<div class="pack-title">Full – 130 DHS</div>
+<div class="pack-text">
+Nettoyage intérieur et extérieur pour un résultat propre et soigné.
+</div>
 </div>
 
-<div class="card">
-<div class="pack-title">Premium - 200 DHS</div>
-<div class="pack-text">Finition haut de gamme avec soin du détail</div>
+<div class="info-card">
+<div class="pack-title">Premium – 200 DHS</div>
+<div class="pack-text">
+Nettoyage approfondi avec produits haut de gamme et finitions premium.
+</div>
 </div>
 
 <!-- ZONE -->
-<div class="title">Zone de travail</div>
 
-<div class="card">
-<div class="pack-text">Marrakech + rayon de 25 km</div>
+<div class="title">Zone d’intervention</div>
+
+<div class="info-card">
+<div class="pack-text">
+Service à domicile à Marrakech et dans un rayon de 25 km.
+</div>
 </div>
 
 <!-- VALEURS -->
+
 <div class="title">Nos valeurs</div>
 
-<div class="card">
+<div class="info-card">
 <div class="pack-text">
-Qualité • Rapidité • Soin du détail • Confiance client
+Qualité • Fiabilité • Rapidité • Satisfaction client
 </div>
 </div>
 
 <!-- PHRASE -->
-<div class="card">
-<p class="small"><b>“Le détail fait la différence.”</b></p>
+
+<div class="info-card">
+<div class="phrase">
+Le détail fait la différence.
+</div>
 </div>
 
 <!-- CONTACT -->
+
 <div class="title">Contact</div>
 
-<div class="card">
-<p>📧 contactelephanteau@gmail.com</p>
+<div class="info-card">
 
-<a class="btn primary" href="https://instagram.com" target="_blank">
-📸 Instagram
-</a>
+<div class="contact-text">
+📧 contactelephanteau@gmail.com
 </div>
 
-<!-- COPYRIGHT -->
+<a class="instagram-btn"
+href="https://instagram.com"
+target="_blank">
+📸 Instagram
+</a>
+
+</div>
+
 <div class="footer">
 © 2026 Éléphanteau Car Wash — All rights reserved
 </div>
 
 <script>
-function sendWhatsApp() {
 
-  let service = document.getElementById("service").value;
-  let nom = document.getElementById("nom").value;
-  let telephone = document.getElementById("telephone").value;
-  let email = document.getElementById("email").value;
-  let heure = document.getElementById("heure").value;
-  let adresse = document.getElementById("adresse").value;
+function sendWhatsApp(){
 
-  let message =
-  "Bonjour Éléphanteau Car Wash,%0A%0A" +
-  "Nouvelle réservation :%0A%0A" +
-  "Nom : " + nom + "%0A" +
-  "Téléphone : " + telephone + "%0A" +
-  "Email : " + email + "%0A" +
-  "Service : " + service + "%0A" +
-  "Heure : " + heure + "%0A" +
-  "Adresse : " + adresse + "%0A%0A" +
-  "Merci de confirmer.";
+let service=document.getElementById("service").value;
+let nom=document.getElementById("nom").value;
+let telephone=document.getElementById("telephone").value;
+let email=document.getElementById("email").value;
+let heure=document.getElementById("heure").value;
+let adresse=document.getElementById("adresse").value;
 
-  window.open("https://wa.me/212600795000?text=" + message, "_blank");
+let message=
+"Bonjour Éléphanteau Car Wash,%0A%0A"+
+"Nouvelle réservation :%0A%0A"+
+"Nom : "+nom+"%0A"+
+"Téléphone : "+telephone+"%0A"+
+"Email : "+email+"%0A"+
+"Service : "+service+"%0A"+
+"Heure : "+heure+"%0A"+
+"Adresse : "+adresse+"%0A%0A"+
+"Merci de confirmer la disponibilité.";
+
+window.open(
+"https://wa.me/212600795000?text="+message,
+"_blank"
+);
+
 }
+
 </script>
 
 </body>
