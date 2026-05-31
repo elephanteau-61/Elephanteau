@@ -51,18 +51,19 @@ h1 {
   font-weight:bold;
 }
 
-/* CARDS (PLUS GRAND + COHÉRENT) */
+/* CARDS (PACKS + DESCRIPTION) */
 .card {
   background:white;
   margin:15px auto;
   width:90%;
   max-width:520px;
-  padding:20px;
+  padding:22px;
   border-radius:14px;
   box-shadow:0 3px 12px rgba(0,0,0,0.08);
+  text-align:center; /* CENTRÉ DANS CHAQUE CASE */
 }
 
-/* INPUTS */
+/* INPUTS (ON NE TOUCHE PAS LE FORMULAIRE) */
 input, select {
   width:100%;
   padding:12px;
@@ -99,10 +100,31 @@ input, select {
 /* TEXT */
 .small {
   text-align:center;
-  font-size:15px;
+  font-size:16px;
   color:#555;
   font-style:italic;
   line-height:1.5;
+}
+
+/* PACK TEXT STYLE */
+.pack-title {
+  font-size:18px;
+  font-weight:bold;
+  color:#1E3A8A;
+  margin-bottom:6px;
+}
+
+.pack-text {
+  font-size:15px;
+  color:#333;
+}
+
+/* COPYRIGHT */
+.footer {
+  text-align:center;
+  font-size:13px;
+  color:#777;
+  margin:30px 0 20px 0;
 }
 </style>
 </head>
@@ -115,7 +137,7 @@ input, select {
   <p class="subtitle">Lavage rapide • Propre • Professionnel</p>
 </header>
 
-<!-- RESERVATION -->
+<!-- RESERVATION (inchangé) -->
 <div class="title">Réservation</div>
 
 <div class="card">
@@ -142,29 +164,34 @@ Réserver sur WhatsApp
 <div class="title">Nos Packs</div>
 
 <div class="card">
-Basic — lavage extérieur rapide et efficace
+<div class="pack-title">Basic - 80 DHS</div>
+<div class="pack-text">Lavage extérieur rapide et efficace</div>
 </div>
 
 <div class="card">
-Full — intérieur + extérieur propre et soigné
+<div class="pack-title">Full - 130 DHS</div>
+<div class="pack-text">Intérieur + extérieur propre et soigné</div>
 </div>
 
 <div class="card">
-Premium — finition haut de gamme + soin du détail
+<div class="pack-title">Premium - 200 DHS</div>
+<div class="pack-text">Finition haut de gamme avec soin du détail</div>
 </div>
 
 <!-- ZONE -->
 <div class="title">Zone de travail</div>
 
 <div class="card">
-Marrakech + rayon de 25 km
+<div class="pack-text">Marrakech + rayon de 25 km</div>
 </div>
 
 <!-- VALEURS -->
 <div class="title">Nos valeurs</div>
 
 <div class="card">
+<div class="pack-text">
 Qualité • Rapidité • Soin du détail • Confiance client
+</div>
 </div>
 
 <!-- PHRASE -->
@@ -181,6 +208,11 @@ Qualité • Rapidité • Soin du détail • Confiance client
 <a class="btn primary" href="https://instagram.com" target="_blank">
 📸 Instagram
 </a>
+</div>
+
+<!-- COPYRIGHT -->
+<div class="footer">
+© 2026 Éléphanteau Car Wash — All rights reserved
 </div>
 
 <script>
