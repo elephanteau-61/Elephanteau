@@ -9,13 +9,12 @@
 
 body{
     margin:0;
-    font-family:Arial,sans-serif;
+    font-family:Arial;
     background:#f5f7fb;
-    color:#222;
+    color:#111;
 }
 
 /* HEADER */
-
 header{
     background:#1E3A8A;
     color:white;
@@ -34,23 +33,20 @@ h1{
 }
 
 .subtitle{
-    font-size:18px;
+    font-size:16px;
     opacity:0.9;
 }
 
 /* TITRES */
-
 .title{
     text-align:center;
-    color:#1E3A8A;
-    font-size:30px;
+    margin-top:40px;
+    font-size:26px;
     font-weight:bold;
-    margin-top:45px;
-    margin-bottom:20px;
+    color:#1E3A8A;
 }
 
 /* FORMULAIRE */
-
 .form-card{
     background:white;
     width:90%;
@@ -61,13 +57,12 @@ h1{
     box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-input,
-select{
+input,select{
     width:100%;
     padding:12px;
     margin:8px 0;
-    border:1px solid #ddd;
     border-radius:10px;
+    border:1px solid #ddd;
     font-size:15px;
     box-sizing:border-box;
 }
@@ -76,13 +71,12 @@ select{
     display:block;
     width:100%;
     padding:14px;
-    border:none;
-    border-radius:10px;
+    border-radius:12px;
     text-decoration:none;
-    text-align:center;
     font-weight:bold;
-    cursor:pointer;
+    text-align:center;
     margin-top:10px;
+    cursor:pointer;
 }
 
 .whatsapp{
@@ -90,59 +84,65 @@ select{
     color:white;
 }
 
-/* BLOCS DU BAS */
-
+/* BLOCS BAS */
 .info-card{
-    width:70%;
-    max-width:900px;
+    width:90%;
+    max-width:700px;
     margin:15px auto;
-    padding:30px;
+    padding:25px;
     background:white;
     border-radius:14px;
     box-shadow:0 3px 12px rgba(0,0,0,0.08);
     text-align:center;
 }
 
+/* PACKS */
 .pack-title{
-    font-size:26px;
+    font-size:24px;
     font-weight:bold;
     color:#1E3A8A;
-    margin-bottom:10px;
 }
 
 .pack-text{
-    font-size:20px;
-    line-height:1.6;
+    font-size:18px;
+    margin-top:5px;
+    line-height:1.5;
 }
 
+/* PHRASE MARKETING */
 .phrase{
-    font-size:36px;
+    font-size:34px;
     font-weight:bold;
     color:#1E3A8A;
-    line-height:1.4;
+    line-height:1.3;
 }
 
+/* CONTACT */
 .contact-text{
-    font-size:22px;
+    font-size:18px;
+    margin-bottom:15px;
 }
 
+/* INSTAGRAM BUTTON */
 .instagram-btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:14px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
     background:#1E3A8A;
     color:white;
+    padding:14px;
+    border-radius:12px;
     text-decoration:none;
-    border-radius:10px;
-    font-size:18px;
     font-weight:bold;
 }
 
+/* FOOTER */
 .footer{
     text-align:center;
-    color:#777;
     font-size:14px;
-    margin:40px 0 20px 0;
+    color:#777;
+    margin:30px 0 20px 0;
 }
 
 </style>
@@ -151,19 +151,12 @@ select{
 <body>
 
 <header>
-
-<img src="logo.png.png" alt="Logo" class="logo">
-
-<h1>Éléphanteau Car Wash</h1>
-
-<p class="subtitle">
-Lavage rapide • Propre • Professionnel
-</p>
-
+    <img src="logo.png.png" class="logo">
+    <h1>Éléphanteau Car Wash</h1>
+    <p class="subtitle">Lavage rapide • Propre • Professionnel</p>
 </header>
 
 <!-- RESERVATION -->
-
 <div class="title">Réservation</div>
 
 <div class="form-card">
@@ -175,88 +168,73 @@ Lavage rapide • Propre • Professionnel
 </select>
 
 <input id="nom" placeholder="Nom complet">
-
 <input id="telephone" placeholder="Téléphone">
-
 <input id="email" placeholder="Email">
-
 <input id="heure" placeholder="Heure souhaitée">
-
 <input id="adresse" placeholder="Adresse complète">
 
-<a href="#" class="btn whatsapp" onclick="sendWhatsApp()">
+<a class="btn whatsapp" onclick="sendWhatsApp()">
 Réserver sur WhatsApp
 </a>
 
 </div>
 
 <!-- PACKS -->
-
 <div class="title">Nos Packs</div>
 
 <div class="info-card">
-<div class="pack-title">Basic – 80 DHS</div>
-<div class="pack-text">
-Lavage extérieur complet pour redonner éclat et propreté à votre véhicule.
-</div>
+<div class="pack-title">Basic - 80 DHS</div>
+<div class="pack-text">Lavage extérieur rapide et efficace</div>
 </div>
 
 <div class="info-card">
-<div class="pack-title">Full – 130 DHS</div>
-<div class="pack-text">
-Nettoyage intérieur et extérieur pour un résultat propre et soigné.
-</div>
+<div class="pack-title">Full - 130 DHS</div>
+<div class="pack-text">Intérieur + extérieur propre et soigné</div>
 </div>
 
 <div class="info-card">
-<div class="pack-title">Premium – 200 DHS</div>
-<div class="pack-text">
-Nettoyage approfondi avec produits haut de gamme et finitions premium.
-</div>
+<div class="pack-title">Premium - 200 DHS</div>
+<div class="pack-text">Finition haut de gamme avec soin du détail</div>
 </div>
 
 <!-- ZONE -->
-
-<div class="title">Zone d’intervention</div>
+<div class="title">Zone de travail</div>
 
 <div class="info-card">
-<div class="pack-text">
-Service à domicile à Marrakech et dans un rayon de 25 km.
-</div>
+<div class="pack-text">Marrakech + rayon de 25 km</div>
 </div>
 
 <!-- VALEURS -->
-
 <div class="title">Nos valeurs</div>
 
 <div class="info-card">
-<div class="pack-text">
-Qualité • Fiabilité • Rapidité • Satisfaction client
-</div>
+<div class="pack-text">Qualité • Rapidité • Soin du détail • Confiance client</div>
 </div>
 
 <!-- PHRASE -->
-
 <div class="info-card">
-<div class="phrase">
-Le détail fait la différence.
-</div>
+<div class="phrase">Le détail fait la différence.</div>
 </div>
 
 <!-- CONTACT -->
-
 <div class="title">Contact</div>
 
 <div class="info-card">
 
 <div class="contact-text">
-📧 contactelephanteau@gmail.com  
+📧 contactelephanteau@gmail.com
+<br><br>
 📸 @elephanteau.cleaning
 </div>
+
+<a class="instagram-btn" href="https://instagram.com/elephanteau.cleaning" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="22">
+Instagram
 </a>
 
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
 © 2026 Éléphanteau Car Wash — All rights reserved
 </div>
@@ -281,12 +259,9 @@ let message=
 "Service : "+service+"%0A"+
 "Heure : "+heure+"%0A"+
 "Adresse : "+adresse+"%0A%0A"+
-"Merci de confirmer la disponibilité.";
+"Merci de confirmer.";
 
-window.open(
-"https://wa.me/212600795000?text="+message,
-"_blank"
-);
+window.open("https://wa.me/212600795000?text="+message,"_blank");
 
 }
 
