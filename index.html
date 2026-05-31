@@ -2,20 +2,22 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Éléphanteau Wash</title>
+<title>Éléphanteau Car Wash</title>
 
 <style>
 body {
   margin:0;
   font-family:Arial;
-  background:#0B1220;
-  color:white;
+  background:#f5f7fb;
+  color:#111;
 }
 
 /* HEADER */
 header {
   text-align:center;
   padding:40px 20px;
+  background:#1E3A8A;
+  color:white;
 }
 
 .logo {
@@ -36,7 +38,7 @@ h1 {
 }
 
 .subtitle {
-  opacity:0.7;
+  opacity:0.85;
 }
 
 /* TITRES */
@@ -44,33 +46,37 @@ h1 {
   text-align:center;
   margin-top:25px;
   font-size:18px;
-  color:#93C5FD;
+  color:#1E3A8A;
+  font-weight:bold;
 }
 
-/* CARDS */
+/* CARDS (FORMULAIRE COMPACT) */
 .card {
-  background:#111A2E;
+  background:white;
   margin:10px auto;
-  width:85%;
+  width:92%;
+  max-width:380px;
   padding:15px;
   border-radius:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 /* INPUTS */
 input, select {
   width:100%;
-  padding:12px;
+  padding:10px;
   margin:6px 0;
   border-radius:10px;
-  border:none;
+  border:1px solid #ddd;
+  font-size:14px;
   outline:none;
 }
 
 /* BUTTONS */
 .btn {
   display:block;
-  width:85%;
-  margin:10px auto;
+  width:100%;
+  margin-top:10px;
   padding:14px;
   border-radius:12px;
   text-decoration:none;
@@ -78,22 +84,21 @@ input, select {
   text-align:center;
 }
 
-.primary {
-  background:#3B82F6;
-  color:white;
-}
-
 .whatsapp {
   background:#25D366;
   color:white;
 }
 
-/* FOOTER TEXT */
+.primary {
+  background:#1E3A8A;
+  color:white;
+}
+
+/* TEXT */
 .small {
   text-align:center;
-  font-size:13px;
-  opacity:0.8;
-  margin-top:10px;
+  font-size:14px;
+  color:#555;
   font-style:italic;
 }
 </style>
@@ -103,12 +108,12 @@ input, select {
 
 <header>
   <img src="logo.png.png" class="logo">
-  <h1>Éléphanteau Wash</h1>
-  <p class="subtitle">Premium Car Wash • Marrakech</p>
+  <h1>Éléphanteau Car Wash</h1>
+  <p class="subtitle">Lavage rapide • Propre • Professionnel</p>
 </header>
 
 <!-- RESERVATION -->
-<div class="title">Réservation rapide</div>
+<div class="title">Réservation</div>
 
 <div class="card">
 
@@ -124,7 +129,9 @@ input, select {
 <input id="heure" placeholder="Heure (ex: 14h)">
 <input id="adresse" placeholder="Adresse complète">
 
-<a class="btn whatsapp" href="#" onclick="sendWhatsApp()">Réserver sur WhatsApp</a>
+<a class="btn whatsapp" href="#" onclick="sendWhatsApp()">
+Réserver sur WhatsApp
+</a>
 
 </div>
 
@@ -151,7 +158,7 @@ Qualité • Rapidité • Soin du détail • Confiance client
 
 <!-- PHRASE -->
 <div class="card">
-<p class="small">“Le détail fait la différence.”</p>
+<p class="small"><b>“Le détail fait la différence.”</b></p>
 </div>
 
 <!-- CONTACT -->
@@ -176,8 +183,8 @@ function sendWhatsApp() {
   let adresse = document.getElementById("adresse").value;
 
   let message =
-  "Bonjour Éléphanteau Wash,%0A%0A" +
-  "Nouvelle réservation premium :%0A%0A" +
+  "Bonjour Éléphanteau Car Wash,%0A%0A" +
+  "Nouvelle réservation :%0A%0A" +
   "Nom : " + nom + "%0A" +
   "Téléphone : " + telephone + "%0A" +
   "Email : " + email + "%0A" +
