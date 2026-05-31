@@ -2,83 +2,98 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Éléphanteau Car Wash</title>
+<title>Éléphanteau Wash</title>
 
 <style>
 body {
   margin:0;
   font-family:Arial;
-  background:#f4f4f4;
+  background:#0B1220;
+  color:white;
 }
 
+/* HEADER */
 header {
-  background:#1E3A8A;
-  color:white;
   text-align:center;
-  padding:30px;
+  padding:40px 20px;
 }
 
 .logo {
-  width:120px;
+  width:110px;
   margin-bottom:10px;
+  animation: float 3s ease-in-out infinite;
 }
 
-h2 {
-  color:#1E3A8A;
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
 }
 
-section {
-  padding:20px;
+h1 {
+  font-size:28px;
+  margin:10px 0;
+}
+
+.subtitle {
+  opacity:0.7;
+}
+
+/* BUTTONS */
+.btn {
+  display:block;
+  width:85%;
+  margin:10px auto;
+  padding:14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
   text-align:center;
 }
 
-.box {
-  background:white;
-  margin:10px auto;
-  max-width:500px;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+.primary {
+  background:#3B82F6;
+  color:white;
 }
 
-input, select {
-  width:90%;
-  padding:10px;
-  margin:8px 0;
-  border-radius:8px;
-  border:1px solid #ccc;
-}
-
-.btn {
-  display:inline-block;
+.whatsapp {
   background:#25D366;
   color:white;
-  padding:12px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:10px;
 }
 
-.price {
-  font-weight:bold;
-  color:#1E3A8A;
+/* CARDS */
+.card {
+  background:#111A2E;
+  margin:10px auto;
+  width:85%;
+  padding:15px;
+  border-radius:12px;
 }
 
-.phrase {
-  font-weight:bold;
+/* INPUTS */
+input, select {
+  width:100%;
+  padding:12px;
+  margin:6px 0;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+
+/* SECTION TITLE */
+.title {
+  text-align:center;
+  margin-top:25px;
   font-size:18px;
-  color:#1E3A8A;
+  color:#93C5FD;
 }
 
-.insta {
-  color:#E1306C;
-  font-weight:bold;
-}
-
-.zone {
-  font-weight:bold;
-  color:#1E3A8A;
+/* FOOTER TEXT */
+.small {
+  text-align:center;
+  font-size:12px;
+  opacity:0.6;
+  margin-top:20px;
 }
 </style>
 </head>
@@ -87,109 +102,69 @@ input, select {
 
 <header>
   <img src="logo.png.png" class="logo">
-  <h1>Éléphanteau Car Wash</h1>
-  <p><b>Lavage rapide • Propre • Professionnel</b></p>
+  <h1>Éléphanteau Wash</h1>
+  <p class="subtitle">Premium Car Wash • Marrakech</p>
 </header>
 
 <!-- RESERVATION -->
-<section>
+<div class="title">Réservation rapide</div>
 
-<h2>Réservation</h2>
-
-<div class="box">
+<div class="card">
 
 <select id="service">
-  <option value="Basic - 80 DHS">Basic - 80 DHS</option>
-  <option value="Full - 130 DHS">Full - 130 DHS</option>
-  <option value="Premium - 200 DHS">Premium - 200 DHS</option>
+  <option>Basic - 80 DHS</option>
+  <option>Full - 130 DHS</option>
+  <option>Premium - 200 DHS</option>
 </select>
 
-<input id="nom" type="text" placeholder="Nom complet">
-<input id="telephone" type="text" placeholder="Téléphone">
-<input id="email" type="email" placeholder="Email">
-<input id="heure" type="text" placeholder="Heure (ex: 14h30)">
-<input id="adresse" type="text" placeholder="Adresse complète">
+<input id="nom" placeholder="Nom complet">
+<input id="telephone" placeholder="Téléphone">
+<input id="email" placeholder="Email">
+<input id="heure" placeholder="Heure (ex: 14h)">
+<input id="adresse" placeholder="Adresse complète">
 
-<a class="btn" href="#" onclick="sendWhatsApp()">Réserver sur WhatsApp</a>
+<a class="btn whatsapp" href="#" onclick="sendWhatsApp()">Réserver sur WhatsApp</a>
 
 </div>
-
-</section>
 
 <!-- PACKS -->
-<section>
+<div class="title">Nos Packs</div>
 
-<h2>Nos Packs</h2>
-
-<div class="box">
-<p class="price">Basic - 80 DHS</p>
-<p>Lavage extérieur simple rapide.</p>
-</div>
-
-<div class="box">
-<p class="price">Full - 130 DHS</p>
-<p>Intérieur + extérieur complet.</p>
-</div>
-
-<div class="box">
-<p class="price">Premium - 200 DHS</p>
-<p>Nettoyage complet haut de gamme avec finition parfaite.</p>
-</div>
-
-</section>
+<div class="card">Basic — rapide & extérieur</div>
+<div class="card">Full — intérieur + extérieur</div>
+<div class="card">Premium — finition premium complète</div>
 
 <!-- ZONE -->
-<section>
+<div class="title">Zone</div>
+<div class="card">Marrakech + 25 km</div>
 
-<h2>Zone de travail</h2>
+<!-- CTA -->
+<a class="btn primary" href="https://instagram.com">Instagram</a>
 
-<div class="box">
-<p class="zone">Marrakech + rayon de 25 km</p>
-</div>
-
-</section>
-
-<!-- PHRASE -->
-<section>
-
-<div class="box">
-<p class="phrase">“Le détail fait la différence.”</p>
-</div>
-
-</section>
-
-<!-- INSTAGRAM -->
-<section>
-
-<h2>Contact</h2>
-<p class="insta">Instagram : @toncompte</p>
-
-</section>
+<div class="small">“Le détail fait la différence”</div>
 
 <script>
 function sendWhatsApp() {
 
   let service = document.getElementById("service").value;
   let nom = document.getElementById("nom").value;
-  let telephone = document.getElementById("telephone").value;
+  let tel = document.getElementById("telephone").value;
   let email = document.getElementById("email").value;
   let heure = document.getElementById("heure").value;
   let adresse = document.getElementById("adresse").value;
 
   let message =
-  "Bonjour Éléphanteau Car Wash,%0A%0A" +
-  "Nouvelle réservation :%0A%0A" +
+  "Bonjour Éléphanteau Wash,%0A%0A" +
+  "Nouvelle réservation premium :%0A%0A" +
   "Nom : " + nom + "%0A" +
-  "Téléphone : " + telephone + "%0A" +
+  "Téléphone : " + tel + "%0A" +
   "Email : " + email + "%0A" +
   "Service : " + service + "%0A" +
   "Heure : " + heure + "%0A" +
   "Adresse : " + adresse + "%0A%0A" +
-  "Merci de confirmer la disponibilité.";
+  "Merci de confirmer.";
 
-  let phone = "212600795000";
-
-  window.open("https://wa.me/" + phone + "?text=" + message, "_blank");
+  window.open("https://wa.me/212600795000?text=" + message, "_blank");
 }
 </script>
 
